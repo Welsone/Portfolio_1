@@ -11,14 +11,11 @@ html{
     overflow-x: hidden;
     font-size: 70%;
     scroll-behavior: smooth;
-    
 }
 
-
 /*navbar*/
-
 .header{
-    background: transparent ;
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -26,6 +23,8 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
+    padding: 0 20px; /* Ajustado para mobile */
 }
 
 .navbar{
@@ -36,85 +35,93 @@ html{
     padding: 20px 50px;
 }
 
-
-
 .navbar a{
     margin: 20px;
     color: #fff;
     border-bottom: 2px solid transparent;
     transition: 0.6s;
     font-size: 15px;
-    font-weight: 50px;
+    font-weight: 500;
 }
 
 .navbar a:hover{
-    border-bottom: 2px solid #c800ffc4;;
-    color: #c800ffc4;;
-
+    border-bottom: 2px solid #c800ffc4;
+    color: #c800ffc4;
 }
 
 .logo{
     padding: 20px 50px;
     font-size: 30px;
-    font-weight: 400px;
+    font-weight: 400;
     color: #fff;
     text-shadow: 0 0 25px #c800ffc4;
+}
+
+/* Menu hambúrguer para mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 /*Section Inicio*/
 section{ /*Todas as sections*/
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     padding: 20px 50px;
-    margin-top: 50px;
+    margin-top: 70px; /* Ajustado para compensar navbar */
 }
-
-
 
 .Inicio{ /*section inicio organizacao*/
     background-color: rgb(56, 56, 56);
     display: flex;
     align-items: center;
-    
+    min-height: 100vh;
 }
 
 .info{ /*texto*/
     padding: 20px 300px 0 0;
-    
+    flex: 1;
 }
 
 .info h2{ /*nome*/
     font-size: 60px;
-    font-weight: 200px;
+    font-weight: 200;
     color: #f4efef;
     border-bottom: 1px solid #f4efef;
     width: 430px;
 }
 
 .info h2 span{ 
-    color: #c800ffc4;;
+    color: #c800ffc4;
 }
-
 
 .info h3{ /*dev wako*/
     font-size: 30px;
-    font-weight: 100px;
+    font-weight: 100;
     margin-top: 2px;
     color: #f4efef;
 }
 
 .info h3 span{
     text-shadow:0 0 5px #c800ffc4;
-
 }
 
 .info p{
     font-size: 16px;
-    font-weight: 60px;
+    font-weight: 600;
     color: #f4efef;
     margin-top: 15px;
     text-align: justify;
-
 }
 
 /*butoes*/
@@ -123,11 +130,13 @@ section{ /*Todas as sections*/
   display: flex;
   align-items: center;
   margin-top: 25px;
+  flex-wrap: wrap; /* Permite quebra de linha */
 }
 /*butoes de sociais*/
 .social{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .social a{
@@ -136,10 +145,9 @@ section{ /*Todas as sections*/
     padding: 10px;
     font-size: 15px;
     border-radius: 50%;
-    margin: 20px 20px;
+    margin: 10px 10px; /* Reduzido para mobile */
     color: #c800ffc4;
-    transition:  0.5s;
-
+    transition: 0.5s;
 }
 
 .social a:hover{
@@ -150,7 +158,6 @@ section{ /*Todas as sections*/
 }
 
 /*cv*/
-
 .Cv{
     border: 1px solid ;
     background-color: transparent;
@@ -159,6 +166,7 @@ section{ /*Todas as sections*/
     border-radius: 30px;
     color: #c800ffc4;
     transition: 0.5s;
+    margin-left: 20px; /* Espaço entre botões */
 }
     
 .Cv:hover{
@@ -170,16 +178,16 @@ section{ /*Todas as sections*/
 }
 
 /*Section habilidade*/
-
 .Habilidades{ /*sectio habilidades*/
     margin-top: 120px;
     margin-bottom: 120px;
+    min-height: 100vh;
 }
 
 .textoprincipal{ /*minhas habilidades*/
     margin-bottom: 60px;
     font-size: 60px;
-    font-weight: 200px;
+    font-weight: 200;
     color: #f4efef;
     border-bottom: 1px solid #f4efef;
     border-top: 1px solid #f4efef;
@@ -207,31 +215,29 @@ section{ /*Todas as sections*/
     cursor: pointer;
 }
 
-
 .Habilidadespai .box1:hover{
     box-shadow: 0 0 15px #c800ffc4;
     border: 1px solid #c800ffc4;
-    transform: scale(1.0.5);
+    transform: scale(1.05);
 }
 
 /*display do texto e img*/
 .Habilidadespai .box1 .boxe{
     display: flex;
-    
 }
 
 /*icone man*/
 .Habilidadespai .box1 i{
    margin-top: 6px;
    font-size: 30px;
-   font-weight: 100px;
+   font-weight: 100;
    color:#c800ffc4;
 }
 
 /*texto principal*/
 .Habilidadespai .box1 h3{
     font-size: 30px;
-    font-weight: 100px;
+    font-weight: 100;
     margin-top: 2px;
     color: #f4efef;
 }
@@ -239,16 +245,11 @@ section{ /*Todas as sections*/
 /*texto basic*/
 .Habilidadespai .box1 p{
     font-size: 16px;
-    font-weight: 60px;
+    font-weight: 600;
     color: #f4efef;
     margin-top: 15px;
     text-align: justify;
-
 }
-
-
-
-
 
 /*card 2 habilidades*/
 .Habilidadespai .box2{
@@ -263,26 +264,25 @@ section{ /*Todas as sections*/
 .Habilidadespai .box2:hover{
     box-shadow: 0 0 15px #c800ffc4;
     border: 1px solid #c800ffc4;
-    transform: scale(1.0.5);
+    transform: scale(1.05);
 }
 
 /*display do texto e img*/
 .Habilidadespai .box2 .boxe{
     display: flex;
-    
 }
 
 /*icone man 2*/
 .Habilidadespai .box2 i{
    margin-top: 6px;
    font-size: 30px;
-   font-weight: 100px;
+   font-weight: 100;
    color:#c800ffc4;
 }
 /*texto principal*/
 .Habilidadespai .box2 h3{
     font-size: 30px;
-    font-weight: 100px;
+    font-weight: 100;
     margin-top: 2px;
     color: #f4efef;
 }
@@ -290,15 +290,11 @@ section{ /*Todas as sections*/
 /*texto basic*/
 .Habilidadespai .box2 p{
     font-size: 16px;
-    font-weight: 60px;
+    font-weight: 600;
     color: #f4efef;
     margin-top: 15px;
     text-align: justify;
-
 }
-
-
-
 
 /*card 3*/
 .Habilidadespai .box3{ /*card 3*/
@@ -313,27 +309,26 @@ section{ /*Todas as sections*/
 .Habilidadespai .box3:hover{
     box-shadow: 0 0 15px #c800ffc4;
     border: 1px solid #c800ffc4;
-    transform: scale(1.0.5);
+    transform: scale(1.05);
 }
 
 /*display do texto e img*/
 .Habilidadespai .box3 .boxe{
     display: flex;
-    
 }
 
 /*icone man*/
 .Habilidadespai .box3 i{
    margin-top: 6px;
    font-size: 30px;
-   font-weight: 100px;
+   font-weight: 100;
    color:#c800ffc4;
 }
 
 /*texto principal 3*/
 .Habilidadespai .box3 h3{
     font-size: 30px;
-    font-weight: 100px;
+    font-weight: 100;
     margin-top: 2px;
     color: #f4efef;
 }
@@ -341,58 +336,51 @@ section{ /*Todas as sections*/
 /*texto basic 3*/
 .Habilidadespai .box3 p{
     font-size: 16px;
-    font-weight: 60px;
+    font-weight: 600;
     color: #f4efef;
     margin-top: 15px;
     text-align: justify;
-
 }
-
-
 
 /*section Resumo*/
 /*sobre mim*/
-
 .Resumo{
-    height: 160vh;
+    min-height: 100vh;
+    padding: 50px 0;
 }
 
 .Resumox{ /*texto inical/principal*/
     margin-bottom: 60px;
     font-size: 60px;
-    font-weight: 200px;
+    font-weight: 200;
     color: #f4efef;
     border-bottom: 1px solid #f4efef;
     width: 580px;
     margin-left: 30%;
     text-align: center;
-    
-    
 }
 
 .Resumox:hover{
     transform: scale(1.1);
     text-shadow: 0 0 25px blueviolet;
-
 }
 
 .Resumox span{
     color: #c800ffc4;
-    
 }
-
 
 .Resumobox1{ /*sobre mim*/
     background:transparent;
-    height: 190px;
+    height: auto;
     width: 500px;
     margin-left: 33%;
     text-align: center;
+    padding: 20px;
 }
 
 .Resumobox1 h3{ 
     font-size: 30px;
-    font-weight: 100px;
+    font-weight: 100;
     color: #f4efef;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -404,17 +392,16 @@ section{ /*Todas as sections*/
 
 .Resumobox1 p{
     font-size: 16px;
-    font-weight: 60px;
+    font-weight: 600;
     color: #e1dcdc;
     text-align: justify;
 }
 
 /*Education*/
 .Resumoman{
-    position: absolute;
-    width: 95%;
+    position: relative;
+    width: 100%;
     padding: 10px;
-   
 }
 
 .Educ{
@@ -423,7 +410,7 @@ section{ /*Todas as sections*/
     border-bottom: 1px solid #f4efef;
     width: 220px;
     margin: 0 auto 50px;
-    text-align: center
+    text-align: center;
 }
 
 .Resumobox{
@@ -457,7 +444,7 @@ section{ /*Todas as sections*/
 /*fonte e etc*/
 .Resumobox h3{
     font-size: 30px;
-    font-weight: 40px;
+    font-weight: 400;
     margin-top: 2px;
     color: #f4efef;
     margin-bottom: 5px;
@@ -465,30 +452,27 @@ section{ /*Todas as sections*/
 
 .Resumobox p{
     font-size: 16px;
-    font-weight: 20px;
+    font-weight: 200;
     color: #b9b5b5;
     margin-top: 5px;
     text-align: justify;
 }
 
 /*Formulario*/
-
-
 .Contacto{ /*section*/
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-height: 700px;
-
-
+    min-height: 100vh;
+    padding: 50px 0;
 }
 
 .contatinho{ /*texto contacte-me*/
     margin-bottom: 30px;
     font-size: 60px;
-    font-weight: 200px;
+    font-weight: 200;
     color: #f4efef;
     border-bottom: 1px solid #f4efef;
     width: 580px;
@@ -501,7 +485,7 @@ section{ /*Todas as sections*/
 
 .cardizinho{ /*parque em que todas as cards estao*/
     width: 800px;
-    height: 400px;
+    height: auto;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -512,7 +496,6 @@ section{ /*Todas as sections*/
     max-width: 500px;
     gap: 10px; 
     margin-top: 10px;
-
 }
 
 .cardd input{ /*formulario*/
@@ -524,13 +507,13 @@ section{ /*Todas as sections*/
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: 1 solid #ffffff;
+    border: 1px solid #ffffff;
     box-shadow: 0 0 2px #c800ff;
 }
 
 .cardd h3{
     font-size: 20px;
-    font-weight: 30px;
+    font-weight: 300;
     margin-top: 2px;
     color: #f4efef;
     margin-bottom: 5px;
@@ -548,7 +531,7 @@ section{ /*Todas as sections*/
     border-radius: 10px;
     color: #f4efef;
     font-size: 16px;
-    font-weight: 100px;
+    font-weight: 100;
     transition: 0.5s;
 }
 
@@ -563,19 +546,18 @@ section{ /*Todas as sections*/
 }
 
 /*Projectos*/
-
-
 .projectos_texto1{
     color: #f4efef;
     font-size: 40px;
     text-align: center;
-    font-weight: 100px;
+    font-weight: 100;
     margin-bottom: 20px;
 }
 
 .meus_projectos{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
 }
 
 .Projecto1{
@@ -598,8 +580,6 @@ section{ /*Todas as sections*/
    margin-bottom: -10px;
 }
 
-
-
 .Projecto1 .imagem{
     display: flex;
     align-items: center;
@@ -611,11 +591,6 @@ section{ /*Todas as sections*/
     max-width: 300px;
     max-height: 180px;
     margin: 20px;
-}
-
-
-.Projecto1 .h3ea{
-   margin-bottom: -10px;
 }
 
 .Projecto1 .texto_projectos{
@@ -667,7 +642,6 @@ section{ /*Todas as sections*/
 }
 
 /*PRojecto 3*/
-
 .Projecto3{
     border: 2px solid #f4efef;
     border-radius: 30px;
@@ -694,9 +668,10 @@ section{ /*Todas as sections*/
 .Projecto3 h3{
     text-align: center;
     margin: 10px 20px;
-    font-size: 30px;
+       font-size: 30px;
     color: #f4efef;
 }
+
 .Projecto3 .h3ea{
    margin-bottom: -10px;
 }
@@ -710,8 +685,9 @@ section{ /*Todas as sections*/
 
 /*footer*/
 .header1{ /*eo footer*/
-    margin-top: 110vh;
+    margin-top: 50px;
     background-color: #212121;
+    padding: 20px 0;
 }
 
 .footer{ /*oerganization*/
@@ -719,6 +695,9 @@ section{ /*Todas as sections*/
     justify-content: space-between;
     align-items: center;
     flex-direction: row-reverse;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
 }
 
 .footer div{
@@ -729,29 +708,24 @@ section{ /*Todas as sections*/
 .footer div h3{
     color: #f4efef;
     font-size: 30px;
-    font-weight: 100px;
+    font-weight: 100;
     margin-right: 20px;
     margin-left: 20px;
-
 }
 
 /*imagem de GOD DID*/
-
 .footer .footer_text{
     margin-right: 20px;
 }
 
 .footer .footer_text img{
     width: 100px;
-    transition:  0.5s ease-in-out;
-    
+    transition: 0.5s ease-in-out;
 }
-
 
 .footer .footer_text img:hover{
     transform: scale(1.05);
 }
-
 
 /*botao sap*/
 .footer div .first a{
@@ -762,8 +736,7 @@ section{ /*Todas as sections*/
     border-radius: 50%;
     margin: 20px 20px;
     color: #ffffffc4;
-    transition:  0.5s ease-in-out;
-
+    transition: 0.5s ease-in-out;
 }
 
 .footer div .first a:hover{
@@ -773,7 +746,6 @@ section{ /*Todas as sections*/
 }
 
 /*botao insta*/
-
 .footer div .second a{
     background-color: transparent;
     border: 1px solid #ffffffc4;
@@ -782,7 +754,7 @@ section{ /*Todas as sections*/
     border-radius: 50%;
     margin: 20px 20px;
     color: #ffffffc4;
-    transition:  0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .footer div .second a:hover{
@@ -791,11 +763,9 @@ section{ /*Todas as sections*/
     box-shadow: 0 0 15px #d5d1d6;
 }
 
-
 /*Galeria man*/
 
 /*container das imagens electrecidade e Musica*/
-
 .container_1{
     display: flex;
     align-items: center;
@@ -811,8 +781,7 @@ section{ /*Todas as sections*/
     display: flex;
     border: 3px solid #f4efef;
     border-radius: 30px;
-    transition: 0.5 ease-in-out;
-    
+    transition: 0.5s ease-in-out;
 }
 
 .container_1 .Electrecidade_imagem img:hover{
@@ -826,7 +795,7 @@ section{ /*Todas as sections*/
     display: flex;
     border: 3px solid #f4efef;
     border-radius: 30px;
-    transition: 0.5 ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .container_1 .gravacao_imagem img:hover{
@@ -834,26 +803,356 @@ section{ /*Todas as sections*/
     box-shadow: 0 0 15px #f4efef;
 }
 
-
 /*grid de imagens*/
 .grip_img{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
     background-size: cover;
     background: no-repeat center;
 }
 
 .grip_img img{
-    width: 300px;
-    margin: 20px;
-    max-height:370px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    max-height: 370px;
     border: 3px solid #f4efef;
     border-radius: 20px;
     cursor: pointer;
-    transition: 0.5 ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .grip_img img:hover{
     transform: scale(1.05);
     box-shadow: 0 0 15px #f4efef;
-} 
+}
+
+/* Media Queries para Responsividade */
+
+/* Celular (até 768px) */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        position: static;
+        padding: 10px;
+    }
+
+    .navbar {
+        display: flex; 
+        background: transparent;
+        padding: 0px;
+    }
+
+    .navbar a {
+        margin: 7px;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    transition: 0.6s;
+    font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: flex; /* Mostra hambúrguer */
+    }
+
+    .logo {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    section {
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+
+    .Inicio {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .info {
+        padding: 10px 0;
+    }
+
+    .info h2 {
+        font-size: 40px;
+        width: auto;
+    }
+
+    .info h3 {
+        font-size: 20px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+    .buttones {
+        align-items: center;
+    }
+
+    .social a {
+        margin: 10px;
+        padding: 8px;
+    }
+
+    .Cv {
+        padding: 8px 20px;
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .textoprincipal {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .Habilidadespai {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .Habilidadespai .box1, .Habilidadespai .box2, .Habilidadespai .box3 {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .Habilidadespai .box1 h3, .Habilidadespai .box2 h3, .Habilidadespai .box3 h3 {
+        font-size: 20px;
+    }
+
+    .Habilidadespai .box1 p, .Habilidadespai .box2 p, .Habilidadespai .box3 p {
+        font-size: 14px;
+    }
+
+    .Resumo {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .Resumox {
+        font-size: 40px;
+        width: auto;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .Resumobox1 {
+        width: auto;
+        margin-left: 0;
+        height: auto;
+    }
+
+    .Resumobox1 h3 {
+        font-size: 20px;
+    }
+
+    .Resumobox1 p {
+        font-size: 14px;
+    }
+
+    .Educ {
+        font-size: 30px;
+        width: auto;
+    }
+
+    .Resumobox {
+        width: 90%;
+        margin: 20px auto;
+        float: none;
+    }
+
+    .Contacto {
+        position: static;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .contatinho {
+        font-size: 40px;
+        width: auto;
+    }
+
+    .cardizinho {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardd {
+        max-width: 100%;
+    }
+
+    .cardd input {
+        width: 100%;
+    }
+
+    .projectos_texto1 {
+        font-size: 30px;
+    }
+
+    .meus_projectos {
+        grid-template-columns: 1fr;
+    }
+
+    .Projecto1, .Projecto2, .Projecto3 {
+        margin: 10px 0;
+    }
+
+    .Projecto1 img, .Projecto2 img, .Projecto3 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .Projecto1 .texto_projectos, .Projecto2 .texto_projectos, .Projecto3 .texto_projectos {
+        padding: 20px;
+    }
+
+    .header1 {
+        margin-top: 20px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .footer div {
+        margin: 10px 0;
+    }
+
+    .footer div h3 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .footer .footer_text img {
+        width: 80px;
+    }
+
+    .container_1 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container_1 .Electrecidade_imagem img, .container_1 .gravacao_imagem img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .grip_img {
+        grid-template-columns: 1fr;
+    }
+
+    .grip_img img {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Tablet (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 60%;
+    }
+
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    section {
+        padding: 15px 30px;
+    }
+
+    .info {
+        padding: 15px 150px 0 0;
+    }
+
+    .info h2 {
+        font-size: 50px;
+        width: 350px;
+    }
+
+    .info h3 {
+        font-size: 25px;
+    }
+
+    .info p {
+        font-size: 15px;
+    }
+
+    .textoprincipal {
+        font-size: 50px;
+    }
+
+    .Habilidadespai {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .Resumox {
+        font-size: 50px;
+        width: 450px;
+    }
+
+    .Resumobox1 {
+        width: 400px;
+    }
+
+    .Resumobox {
+        width: 40%;
+    }
+
+    .contatinho {
+        font-size: 50px;
+        width: 450px;
+    }
+
+    .cardizinho {
+        width: 600px;
+    }
+
+    .cardd input {
+        width: 300px;
+    }
+
+    .projectos_texto1 {
+        font-size: 35px;
+    }
+
+    .meus_projectos {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .container_1 {
+        gap: 30px;
+    }
+
+    .container_1 .Electrecidade_imagem img, .container_1 .gravacao_imagem img {
+        width: 400px;
+    }
+
+    .grip_img {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grip_img img {
+        width: 250px;
+    }
+}
+
+/* Desktop (acima de 1024px) - Mantém o original */
+@media (min-width: 1025px) {
+    /* Nenhuma alteração necessária, pois é o layout padrão */
+}
